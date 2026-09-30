@@ -1,0 +1,12 @@
+sequenceDiagram
+    actor User
+    participant CLI as CLI App
+    participant Service as ExpenseService
+    participant DB as SQLite Database
+    User->>CLI: Choose Add Expense
+    CLI->>CLI: Validate input
+    CLI->>Service: add_expense(data)
+    Service->>DB: INSERT expense
+    DB-->>Service: New ID
+    Service-->>CLI: Expense ID
+    CLI-->>User: Show success message
