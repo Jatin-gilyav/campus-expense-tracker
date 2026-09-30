@@ -1,0 +1,17 @@
+flowchart TD
+    A([Start]) --> B[Display Main Menu]
+    B --> C{Select Operation}
+    C -->|Expense CRUD| D[Read User Input]
+    C -->|List| E[Query Expenses]
+    C -->|Budget| F[Set or Update Budget]
+    C -->|Report| G[Generate Monthly Analytics]
+    C -->|Exit| H([End])
+    D --> I[Validate Input]
+    I -->|Invalid| J[Display Error]
+    J --> B
+    I -->|Valid| K[Execute Database Operation]
+    E --> L[Display Result]
+    F --> L
+    G --> L
+    K --> L
+    L --> B
