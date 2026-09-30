@@ -1,0 +1,9 @@
+flowchart TD
+    U[User] --> CLI[Command Line Interface]
+    CLI --> ES[Expense Service]
+    CLI --> BS[Budget Service]
+    CLI --> RS[Report Service]
+    ES --> DB[(SQLite Database)]
+    BS --> DB
+    RS --> DB
+    CLI --> V[Validators]
