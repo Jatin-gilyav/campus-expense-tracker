@@ -72,12 +72,11 @@ campus-expense-tracker/
 │   └── .gitkeep
 └── docs/
     ├── design_notes.md
-    ├── *.mmd
-    └── diagrams/
+    └── *.mmd
 ```
 
 ## Documentation
-See `docs/` for design notes and diagrams. The project report is provided as `docs/PROJECT_REPORT.pdf`.
+The `docs/` folder contains the architecture, workflow, use-case, class/component, sequence, and ER design sources in Mermaid format. The detailed PDF project report is supplied separately for portal submission.
 
 ## Data and Configuration
 No external service is required. Each installation uses its own local SQLite database. The generated database file is ignored by Git.
