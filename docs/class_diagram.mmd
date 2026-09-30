@@ -1,0 +1,40 @@
+classDiagram
+    class Database {
+      +connect()
+      +execute(query, params, fetch)
+      +get_one(query, params)
+    }
+    class ExpenseService {
+      +add_expense()
+      +list_expenses()
+      +get_expense()
+      +update_expense()
+      +delete_expense()
+    }
+    class BudgetService {
+      +set_budget()
+      +list_budgets()
+    }
+    class ReportService {
+      +monthly_summary()
+      +budget_status()
+      +top_category()
+    }
+    class Expense {
+      +expense_id
+      +amount
+      +category
+      +description
+      +expense_date
+    }
+    class Budget {
+      +budget_id
+      +month
+      +category
+      +amount
+    }
+    ExpenseService --> Database
+    BudgetService --> Database
+    ReportService --> Database
+    ExpenseService --> Expense
+    BudgetService --> Budget
